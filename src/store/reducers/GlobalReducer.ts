@@ -1,7 +1,10 @@
 import { setPayload } from '../../utils/redux.js'
 
 const state = {
-  count: 10
+  count: 10,
+  list1: ['000'],
+  list2: ['xxx'],
+  list3: ['FFF']
 }
 
 const actionList = [

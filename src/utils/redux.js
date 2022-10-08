@@ -16,12 +16,15 @@ export const getForwardComponent = (Components) => {
     return {
       state: { ...GlobalState }
     };
-  }, {
-    updateGlobalData(payload) {
-      return {
-        type: 'GlOBALSETPAYLOAD',
-        payload
-      };
-    }
-  }, null, { forwardRef: true })(Components);
+  },
+    null,
+    // {
+    //   updateGlobalData(payload) {
+    //     return {
+    //       type: 'GlOBALSETPAYLOAD',
+    //       payload
+    //     };
+    //   }
+    // },
+    null, { forwardRef: true })(Components);
 };

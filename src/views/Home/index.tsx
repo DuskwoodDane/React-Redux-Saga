@@ -5,7 +5,18 @@ function Home(props: any) {
     console.log(props)
   })
   return (
-    <div>Home</div>
+    <div>
+      <button onClick={() => {
+        console.log('??')
+        props.dispatch({ type: 'get-list1' })
+      }}>Click me</button>
+      <button onClick={() => {
+        props.dispatch({ type: 'get-list2' })
+      }}>Click me2</button>
+      {props.state.list1.map((item: any) => (<div key={item}>{ item }</div>))}
+      {props.state.list2.map((item: any) => (<div key={item}>{ item }</div>))}
+      {props.state.list3.map((item: any) => (<div key={item}>{ item }</div>))}
+    </div>
   )
 }
 
